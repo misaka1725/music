@@ -14,7 +14,6 @@ a.fullscreen {
     align-items: center;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .background-container {
