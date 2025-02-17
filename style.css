@@ -1,29 +1,17 @@
-html,body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-}
-
 a.fullscreen {
     width: 100%;
     height: 100%;
-    font-size: clamp(16px, 5vw, 24px);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     cursor: pointer;
-    padding: 10px;
-    box-sizing: border-box;
 }
 
 @media screen and (max-width: 768px) {
-    a.fullscreen {
-        height: auto;
-        min-height: 100%;
-        word-wrap: break-word;
-    }
+    /*
+        移动端适配
+    */
 }
 
 .background-container {
