@@ -1,3 +1,10 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
 .background-container {
     position: fixed;
     top: 0;
@@ -20,4 +27,10 @@
     to {
         opacity: 1;
     }
+}
+
+@media screen and (max-width: 768px) {
+    /*
+        移动端适配
+    */
 }

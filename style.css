@@ -1,3 +1,10 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
 a.fullscreen {
     width: 100%;
     height: 100%;
@@ -6,12 +13,6 @@ a.fullscreen {
     align-items: center;
     text-align: center;
     cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-    /*
-        移动端适配
-    */
 }
 
 .background-container {
@@ -36,4 +37,10 @@ a.fullscreen {
     to {
         opacity: 1;
     }
+}
+
+@media screen and (max-width: 768px) {
+    /*
+        移动端适配
+    */
 }
