@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新春音律</title>
+    <link rel="stylesheet" href="style.css">      
+    <style>    
+             html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+    }
+    a.fullscreen {
+        display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer; 
+    }   
+.background-container {
+            position: fixed; /* 覆盖整个屏幕 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("image/start2.0.0.webp"); /* 替换为你的图片路径 */
+            background-size: cover;
+            background-position: center;
+            opacity: 0; /* 初始透明度为 0 */
+            animation: fadeIn 2s ease-in-out forwards; /* 应用淡入动画 */
+        }
+
+        /* 定义淡入动画 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+</style>
+</head>
+<body> 
+    <a class="fullscreen" href="page1.html"></a>  
+    <div class="background-container"></div>
+    <div class="content"></div>    
+</body>
+</html>

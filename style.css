@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-image: url("#");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    text-emphasis: none;
+}
+.news{
+    text-emphasis: none;
+    align-items: center;
+    justify-content: center;
+}
