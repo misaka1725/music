@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新春音律</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 设置页面初始为黑屏 */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: black; /* 初始背景为黑色 */
+        }
+
+        /* 背景图片容器 */
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("#"); /* 替换为你的图片路径 */
+            background-size: cover;
+            background-position: center;
+            opacity: 0; /* 初始透明（显示底层黑屏） */
+            animation: fadeIn 2s ease-in-out forwards; /* 应用渐显动画 */
+        }
+
+        /* 定义渐显动画 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+        <style>
+            /* 基础样式 */
+            body {
+                margin: 0;
+                padding: 0;
+                min-height: 100vh;
+            }
+    
+            /* 顶部按钮容器 */
+            .top-buttons {
+                display: flex;
+                justify-content: space-around; /* 均匀分布 */
+                align-items:center;
+                width: 100%;
+                height: 100px;
+                opacity: 0;
+                animation: fadeIn 2s ease-in-out 1s forwards;
+                left: 0%;
+            }
+    
+            /* 方形按钮样式 */
+            .square-btn {
+                width: 512px;          /* 正方形边长 */
+                height: 100px;
+                cursor: pointer;
+                transition: all 0.3s;  /* 平滑过渡效果 */
+                text-decoration: none; /* 去除链接下划线 */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 40px;                        
+                color: white;
+            }
+            /* 悬停效果 */
+            .square-btn:hover {
+                transform: scale(1.1); /* 放大效果 */
+            }
+        </style>
+</head>
+<body>
+    <!-- 背景图片容器（覆盖在黑屏上） -->
+    <div class="background-container"></div>
+    <div class="top-buttons">
+        <a href="main.html" class="square-btn btn1">返回
+            <img src="">
+        </a>
+</body>
+</html>
