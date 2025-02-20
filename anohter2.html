@@ -6,6 +6,141 @@
     <title>新春音律</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* 基础样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        /* 顶部按钮容器 */
+        .top-buttons {
+            display: flex;
+            justify-content: space-around; /* 均匀分布 */
+            align-items:center;
+            width: 1;
+            height: 80%;
+            height: 100px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 1s forwards;
+        }
+
+        /* 方形按钮样式 */
+        .square-btn {
+            width: 200px;          /* 正方形边长 */
+            height: 100px;
+            cursor: pointer;
+            transition: all 0.3s;  /* 平滑过渡效果 */
+            text-decoration: none; /* 去除链接下划线 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;                        
+            color: white;
+        }
+        /* 悬停效果 */
+        .square-btn:hover {
+            transform: scale(1.1); /* 放大效果 */
+        }
+    </style>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* 容器样式 */
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        /* 标题样式 */
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* 跳转框网格布局 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            padding: 50px;
+        }
+
+        /* 跳转框样式 */
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 1s forwards;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 1s forwards;
+        }
+
+        .card-content {
+            padding: 20px;
+
+        }
+
+        .card-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <style>
         /* 设置页面初始为黑屏 */
         html, body {
             margin: 0;
@@ -43,5 +178,73 @@
 <body>
     <!-- 背景图片容器（覆盖在黑屏上） -->
     <div class="background-container"></div>
+    <div class="container">
+        <!-- 跳转框容器 -->
+        <div class="container">
+            <div class="grid">
+                <!-- 跳转框 1 -->
+                <div class="card" data-link="https://www.bilibili.com/video/BV1xK421k7P7/?share_source=copy_web&vd_source=6da1cda36b47d4b7cfbea4cb311c5eb4">
+                    <img src="image/2023.webp" alt="">
+                    <div class="card-content">
+                        <h3>2024年拜年祭联合手元</h3>
+                        <p>梦开始的地方！</p>
+                    </div>
+                </div>
+    
+                <!-- 跳转框 2 -->
+                <div class="card" data-link="https://www.bilibili.com/video/BV18AsueFEnG/?share_source=copy_web&vd_source=6da1cda36b47d4b7cfbea4cb311c5eb4">
+                    <img src="image/shengri2023.webp" alt="">
+                    <div class="card-content">
+                        <h3>2024生日会</h3>
+                        <p>亚托莉生日快乐呀！</p>
+                    </div>
+                </div>
+    
+                <!-- 跳转框 3 -->
+                <div class="card" data-link="https://www.bilibili.com/video/BV169FUecEva/?share_source=copy_web&vd_source=6da1cda36b47d4b7cfbea4cb311c5eb4">
+                    <img src="image/2024.webp" alt="">
+                    <div class="card-content">
+                        <h3>2025年拜年祭联合手元</h3>
+                        <p>逐渐大起来了呢</p>
+                    </div>
+                </div>
+                <div class="card" data-link="https://www.bilibili.com/video/BV1oANqePELs/?share_source=copy_web&vd_source=6da1cda36b47d4b7cfbea4cb311c5eb4">
+                    <img src="image/xinchunyinlv.webp" alt="">
+                    <div class="card-content">
+                        <h3>2025新春音律上半章剧情</h3>
+                        <p>世界の崩壊と救済</p>
+                    </div>
+                </div>
+                <div class="card" data-link="">
+                    <img src="image/tian.webp" alt="">
+                    <div class="card-content">
+                        <h3>未完待续</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="card" data-link="">
+                    <div class="card-content">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <!-- 更多跳转框... -->
+            </div>
+        </div>
+    
+        <!-- JavaScript 实现跳转功能 -->
+        <script>
+            // 为每个卡片添加点击事件
+            document.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('click', function () {
+                    const link = this.dataset.link; // 获取 data-link 属性值
+                    window.location.href = link; // 跳转到指定链接
+                });
+            });
+        </script>
+            <div class="top-buttons">
+                <a href="main.html" class="square-btn btn1">
+                    <img src="image/fanhui.png">
+                </a>
 </body>
 </html>
