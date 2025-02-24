@@ -80,11 +80,39 @@
         </style>
 </head>
 <body>
+        <!-- 背景音乐 -->
+        <audio id="backgroundMusic" loop autoplay>
+            <source src="music/cosmos observer.mp3" type="audio/mpeg">
+            您的浏览器不支持音频元素。
+        </audio>
     <!-- 背景图片容器（覆盖在黑屏上） -->
     <div class="background-container"></div>
     <div class="top-buttons">
         <a href="main.html" class="square-btn btn1">返回
             <img src="">
         </a>
+        <script>
+            // 自动播放背景音乐
+            document.addEventListener('DOMContentLoaded', function() {
+                const audio = document.getElementById('backgroundMusic');
+    
+                // 尝试自动播放
+                function attemptAutoplay() {
+                    audio.play().then(() => {
+                        console.log('音乐自动播放成功');
+                    }).catch((error) => {
+                        console.log('自动播放被阻止，需要用户交互');
+                    });
+                }
+    
+                // 页面加载后尝试自动播放
+                attemptAutoplay();
+    
+                // 用户点击页面任意位置时尝试播放
+                document.body.addEventListener('click', function() {
+                    attemptAutoplay();
+                });
+            });
+        </script>
 </body>
 </html>
